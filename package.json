@@ -1,0 +1,8 @@
+{
+  "name": "cubity-validator",
+  "version": "1.0.0",
+  "description": "A package designed to manage your app validations.",
+  "main": "index.js",
+  "author": "George Safwat",
+  "license": "ISC"
+}
