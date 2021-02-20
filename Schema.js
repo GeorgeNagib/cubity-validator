@@ -2,7 +2,6 @@ class ValidatorClass {
     constructor() {
         this.__MODEL__ = {};
         this.__ERRORS__ = [];
-        this.__IS_VALID__ = true;
         this.__MODES__ = {default: []}
         
     }
@@ -37,19 +36,16 @@ class ValidatorClass {
 
             const result = await this[`__FIELD__${el}`]() || [];
             if(result.length > 0) {
-                this.__IS_VALID__ = false;
                 this.__ERRORS__.push({ [`${el}`]: result});
-            } else {
-                this.__isValid__ = true;
             }
         }
-        var isValid = this.__IS_VALID__;
+
         var errors = [...this.__ERRORS__];
         
-        this.__isValid__ = true;
+
         this.__ERRORS__ = [];
+
         return {
-            isValid, 
             errors
         }
     }
