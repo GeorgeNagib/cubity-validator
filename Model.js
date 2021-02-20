@@ -4,3 +4,5 @@ const Model = function (Schema) {
         return newSchema
     }
 }
+
+module.exports = Model;
