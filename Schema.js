@@ -48,3 +48,5 @@ class ValidatorClass {
     }
 
 }
+
+module.exports = ValidationClass;
