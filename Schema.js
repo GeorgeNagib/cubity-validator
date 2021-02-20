@@ -41,9 +41,14 @@ class ValidatorClass {
                 this.__ERRORS__.push({ [`${el}`]: result});
             }
         }
+        var isValid = this.__IS_VALID__;
+        var errors = [...this.__ERRORS__];
+        
+        this.__isValid__ = true;
+        this.__ERRORS__ = [];
         return {
-            isValid: this.__IS_VALID__,
-            errors: this.__ERRORS__
+            isValid, 
+            errors
         }
     }
 
