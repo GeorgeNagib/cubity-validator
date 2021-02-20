@@ -49,4 +49,4 @@ class ValidatorClass {
 
 }
 
-module.exports = ValidationClass;
+module.exports = ValidatorClass;
