@@ -1,6 +1,7 @@
 class ValidatorClass {
     constructor() {
         this.__MODEL__ = {};
+        this.__ORIGINAL__ = {};
         this.__ERRORS__ = [];
         this.__MODES__ = {default: []}
         
@@ -23,6 +24,7 @@ class ValidatorClass {
 
     validate = async (Instanse, mode = this.__MODES__.default) => {
         this.__MODEL__ = Instanse;
+        this.__ORIGINAL__ = Instanse;
         
         if(typeof mode == 'string') {
             mode = this.__MODES__[mode];
@@ -46,7 +48,8 @@ class ValidatorClass {
         this.__ERRORS__ = [];
 
         return {
-            errors
+            errors,
+            data: this.__MODEL__
         }
     }
 
