@@ -23,8 +23,8 @@ class ValidatorClass {
     
 
     validate = async (Instanse, mode = this.__MODES__.default) => {
-        this.__MODEL__ = Instanse;
-        this.__ORIGINAL__ = Instanse;
+        this.__MODEL__ = {...Instanse};
+        this.__ORIGINAL__ = {...Instanse};
         
         if(typeof mode == 'string') {
             mode = this.__MODES__[mode];
