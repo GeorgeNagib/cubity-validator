@@ -39,6 +39,8 @@ class ValidatorClass {
             if(result.length > 0) {
                 this.__IS_VALID__ = false;
                 this.__ERRORS__.push({ [`${el}`]: result});
+            } else {
+                this.__isValid__ = true;
             }
         }
         var isValid = this.__IS_VALID__;
